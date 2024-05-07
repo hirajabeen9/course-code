@@ -1,0 +1,11 @@
+name: First Workflow
+on: [push]
+jobs: 
+    run-shell-commands:
+        runs-on : ubuntu-latest
+        steps:
+            - name: echo a string
+              run: echo "FIRST WORKFLOW WORKS SUCCESSFULLY!"
+            - name: Multiline Command
+              run: |
+               node -v
