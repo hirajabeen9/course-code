@@ -18,3 +18,14 @@ jobs:
             - name: Setting an notice message with parameters
               run : echo "::notice title=Notice Title,file=app.js,
                      line=2,endLine=3,col=5,endCol=7::Missing Semicolon"
+            - name: Group of colons
+              run: |
+                   echo "::group::My group title"
+                   echo "Inside group body"
+                   echo "::endgroup::"
+            - name: Masking a value
+              run: echo "::add-mask::Secret String"
+            - name: Echo a secret
+              run: echo "Secret String"    
+     
+
