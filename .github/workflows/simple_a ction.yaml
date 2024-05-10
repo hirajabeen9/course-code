@@ -9,6 +9,6 @@ jobs:
              uses: actions/hello-world-javascript-action@8177c4be451a6331f95385502f9c01458cc6346c
              with:
                who-to-greet: Hira Rajput
-           - name: Simple JS Action
+           - name: Time of JS Action
              run: echo "${{steps.greet.outputs.time}}"
    
