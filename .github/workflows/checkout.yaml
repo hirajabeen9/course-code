@@ -1,6 +1,17 @@
 name: Checkout
 on: [push]
 jobs:
+    checkout-actions:
+      runs-on: ubuntu-latest
+      steps:
+        - name: List Files Before
+          uses: actions/checkout@v3
+          with:
+            ref: ${{ github.ref }}
+          
+        - name: List Files After
+          run: ls -a   
+
     checkout-and-display-files:
         runs-on: ubuntu-latest
         steps:
