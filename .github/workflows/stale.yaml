@@ -1,8 +1,8 @@
 name: Stale Issues & PRs
 on:
   schedule:
-    - cron: "0 14 * * *"
-    - cron: "0/5 * * * *" # JUST FOR TESTING
+    - cron: "0 14 * * *"   # Runs daily at 14:00 UTC
+    - cron: "*/5 * * * *"  # Runs every 5 minutes (corrected for syntax)
 
 jobs:
   stale:
@@ -11,5 +11,7 @@ jobs:
       - uses: actions/stale@v8
         with:
           stale-issue-message: "This is some message."
+          stale-pr-message: "This PR is now stale."
           days-before-stale: 1
           days-before-close: 5
+          repo-token: ${{ secrets.GITHUB_TOKEN }}  # Ensures the action has the necessary permissions
