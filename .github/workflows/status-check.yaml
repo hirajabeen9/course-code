@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Step 1
         run: sleep 90
-        timeout-minutes: 1
+        # timeout-minutes: 1
       - name: Step 2
         id: step-2
         continue-on-error: true
@@ -18,7 +18,7 @@ jobs:
         run: echo 'Step 2 has failed'
       - name: Runs on Failure
         if: failure()
-        run: echo 'Just Failure'
+        run: echo 'Failure'
       - name: Runs on Success
         # This is not needed (DEFAULT BEAHAVIOUR)
         if: success()
@@ -35,4 +35,4 @@ jobs:
     needs: job-1
     if: failure()
     steps:
-      - run: echo 'Job 2 which is failed'
+      - run: echo 'Job 2'
