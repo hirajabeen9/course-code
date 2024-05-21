@@ -12,7 +12,7 @@ jobs:
     env:
       JOB_LEVEL_ENV: Available to all steps in env-vars-and-context job
     steps:
-      - name: Log ENV VAR
+      - name: Log ENV VAR 
         run: echo $GITHUB_REF
       - name: Log Context
         run: echo '${{ github.ref }}'
