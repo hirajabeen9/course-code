@@ -3,14 +3,21 @@ on: [push]
 
 jobs:
   node-matrix:
+    continue-on-error: false
     strategy:
       matrix:
-        os: [ubuntu-latest,window-latest]
+        os: [ubuntu-latest, windows-latest]
         node-version: [14, 15, 16]
-    runs-on: ${{matrix.os}}
+        #max-parallel: 3
+    runs-on: ${{ matrix.os }}
     steps:
-      - run: node -v
-      - uses: actions/setup-node@v3
+      - name: Check initial Node.js version
+        run: node -v
+      
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: node -v
+      
+      - name: Check Node.js version after setup
+        run: node -v
