@@ -6,6 +6,12 @@ on:
            description: "Date Value"
            value: ${{jobs.generate-output.outputs.date}} 
 jobs:
+    nested-workflow-call:
+        uses: hirajabeen9/resuseable-workflow/.github/workflows/reuseable.yaml@main
+        with:
+          name: 'Unicorn'
+        secrets:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
     generate-output:
         runs-on: ubuntu-latest
         outputs:
