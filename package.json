@@ -1,0 +1,17 @@
+{
+  "name": "first-workflow",
+  "version": "1.0.0",
+  "description": "Hey there! Welcome to my GitHub repository for \"The Complete Guide Of GitHub Actions\"! \r This is where I've been documenting my journey as I dive into the world of cloud and automation engineering through the Udemy course of the same name. \r As a fresh graduate, I'm super excited to share with you what I've been learning and discovering along the way.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
+  }
+}
