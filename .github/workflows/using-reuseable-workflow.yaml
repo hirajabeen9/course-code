@@ -9,8 +9,9 @@ on:
         required: false
 jobs:
   calling-a-reusable-wf:
-    uses: hirajabeen9/workflows/.github/workflows/reuseable.yaml@main
+    uses: hirajabeen9/resuseable-workflow/github/workflows/reuseable.yaml@main
     with:
       name: ${{ inputs.name }}
     secrets:
-      access-token: ${{ secrets.ACCESS_TOKEN }}
+     access-token: ${{ secrets.ACCESS_TOKEN }}
+    
