@@ -44,11 +44,5 @@ jobs:
         with:
           script: |
             const axios = require('axios');
-            axios('https://icanhazdadjoke.com/', { headers: { Accept: 'text/plain' } })
-              .then(res => {
-                console.log(res.data);
-              })
-              .catch(error => {
-                console.error('Error fetching joke:', error);
-                process.exit(1); // Exit with code 1 if there's an error
-              });
+            const res = await axios('https://icanhazdadjoke.com/', { headers: { Accept: 'text/plain' } });
+            console.log(res.data);
