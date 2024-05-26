@@ -1,5 +1,5 @@
 name: Hello World
-author: Hira Jabeen
+author: Hira Rajput
 description: "Greet someone and record the time"
 inputs:
   who_to_greet:
